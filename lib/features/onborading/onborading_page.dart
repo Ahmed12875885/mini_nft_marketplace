@@ -26,7 +26,7 @@ class OnboradingPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                 SizedBox(height: 50,),
+                SizedBox(height: 50,),
                 Text(
                   StringManager.kWelcomeMessage,
                   style: TextStyle(
