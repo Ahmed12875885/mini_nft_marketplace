@@ -20,7 +20,7 @@ class CustomCard extends StatelessWidget {
                 width: WidthValue.w300,
                 decoration: BoxDecoration(
                   color: ColorManager.kcolor3.withValues(alpha: 0.1),
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(RadiusValue.r20),
                   border: Border.all(
                     color: ColorManager.kcolor3.withValues(alpha: 0.1),
                   ),
@@ -49,14 +49,14 @@ class CustomCard extends StatelessWidget {
                     Container(
                       width: WidthValue.w198_2,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
+                        borderRadius: BorderRadius.circular(RadiusValue.r40),
                         border: Border.all(
                           color: ColorManager.kcolor5.withValues(alpha: 0.5),
                         ),
                         color: ColorManager.kcolor5.withValues(alpha: 0.5),
                       ),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(40),
+                        borderRadius: BorderRadius.circular(RadiusValue.r40),
                         child: BackdropFilter(
                           filter: ImageFilter.blur(sigmaX: BlurValue.b15, sigmaY: BlurValue.b15),
                           child: MaterialButton(

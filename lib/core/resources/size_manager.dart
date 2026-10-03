@@ -13,3 +13,7 @@ class BlurValue {
   static const double w198_2 =198.2;
   static const double w300 =300;
   }
+  class RadiusValue {
+  static const double r20 =20;
+  static const double r40 =40;
+  }
