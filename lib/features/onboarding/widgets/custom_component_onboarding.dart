@@ -1,10 +1,6 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:mini_nft_app/core/resources/color_manager.dart';
-import 'package:mini_nft_app/core/resources/font_manager.dart';
 import 'package:mini_nft_app/core/resources/size_manager.dart';
-import 'package:mini_nft_app/core/resources/string_manager.dart';
 import 'package:mini_nft_app/features/onboarding/widgets/custom_card.dart';
 import 'package:mini_nft_app/features/onboarding/widgets/custome_titel_widget.dart';
 

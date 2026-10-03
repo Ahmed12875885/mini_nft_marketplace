@@ -3,8 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:mini_nft_app/core/resources/color_manager.dart';
 import 'package:mini_nft_app/core/resources/font_manager.dart';
+import 'package:mini_nft_app/core/resources/route_manager.dart';
 import 'package:mini_nft_app/core/resources/size_manager.dart';
 import 'package:mini_nft_app/core/resources/string_manager.dart';
+import 'package:mini_nft_app/features/onboarding/widgets/custome_alpha.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({super.key});
@@ -19,10 +21,10 @@ class CustomCard extends StatelessWidget {
                 height: HeightValue.h190,
                 width: WidthValue.w300,
                 decoration: BoxDecoration(
-                  color: ColorManager.kcolor3.withValues(alpha: 0.1),
+                  color: ColorManager.kcolor3.withValues(alpha: CustomeAlpha.b0_1),
                   borderRadius: BorderRadius.circular(RadiusValue.r20),
                   border: Border.all(
-                    color: ColorManager.kcolor3.withValues(alpha: 0.1),
+                    color: ColorManager.kcolor3.withValues(alpha: CustomeAlpha.b0_1),
                   ),
                 ),
                 child: Column(
@@ -51,17 +53,23 @@ class CustomCard extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(RadiusValue.r40),
                         border: Border.all(
-                          color: ColorManager.kcolor5.withValues(alpha: 0.5),
+                          color: ColorManager.kcolor5.withValues(alpha: CustomeAlpha.b0_5),
                         ),
-                        color: ColorManager.kcolor5.withValues(alpha: 0.5),
+                        color: ColorManager.kcolor5.withValues(alpha: CustomeAlpha.b0_5),
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(RadiusValue.r40),
                         child: BackdropFilter(
                           filter: ImageFilter.blur(sigmaX: BlurValue.b15, sigmaY: BlurValue.b15),
                           child: MaterialButton(
-                            onPressed: () {},
-                            child: Text(StringManager.kbutton2),
+                            onPressed: () {
+                              Navigator.pushNamed(context, RoutName.kHome);
+                            },
+                            child: Text(StringManager.kbutton2,style: TextStyle(
+                              color: ColorManager.kcolor3,
+                              fontSize: FontSize.kFontSize16,
+                              fontWeight: FontWeight.bold,
+                            ),),
                           ),
                         ),
                       ),
