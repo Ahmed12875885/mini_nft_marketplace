@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mini_nft_app/features/onborading/onborading_page.dart';
+import 'package:mini_nft_app/features/onborading/screens/onborading_page.dart';
 
 class RouteManager {
   static Map<String, WidgetBuilder> routes = {
