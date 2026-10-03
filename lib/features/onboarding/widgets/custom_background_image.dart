@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mini_nft_app/core/resorurses/images_manager.dart';
+import 'package:mini_nft_app/core/resources/images_manager.dart';
 
 class CustomBackgroundImage extends StatelessWidget {
 const CustomBackgroundImage({super.key});
@@ -10,7 +10,7 @@ const CustomBackgroundImage({super.key});
       width: double.infinity,
       height: double.infinity,
       fit: BoxFit.cover,
-      image: AssetImage(ImagesManager.kOnboradingImage),
+      image: AssetImage(ImagesManager.kOnboardingImage),
     );
   }
 }

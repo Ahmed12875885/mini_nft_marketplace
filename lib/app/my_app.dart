@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mini_nft_app/core/resorurses/route_manager.dart';
+import 'package:mini_nft_app/core/resources/route_manager.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: RouteManager.routes,
-      initialRoute: RoutName.konBordingPage,
+      initialRoute: RoutName.kOnboardingPage,
     );
   }
 }

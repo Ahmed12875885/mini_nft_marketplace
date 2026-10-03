@@ -1,10 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:mini_nft_app/core/resorurses/color_manager.dart';
-import 'package:mini_nft_app/core/resorurses/font_manager.dart';
-import 'package:mini_nft_app/core/resorurses/size_manager.dart';
-import 'package:mini_nft_app/core/resorurses/string_manager.dart';
+import 'package:mini_nft_app/core/resources/color_manager.dart';
+import 'package:mini_nft_app/core/resources/font_manager.dart';
+import 'package:mini_nft_app/core/resources/size_manager.dart';
+import 'package:mini_nft_app/core/resources/string_manager.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({super.key});
