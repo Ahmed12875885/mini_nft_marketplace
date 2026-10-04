@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_nft_app/core/resources/color_manager.dart';
 import 'package:mini_nft_app/core/resources/font_manager.dart';
+import 'package:mini_nft_app/core/resources/images_manager.dart';
 import 'package:mini_nft_app/core/resources/size_manager.dart';
 import 'package:mini_nft_app/core/resources/string_manager.dart';
 import 'package:mini_nft_app/features/onboarding/widgets/custom_home_page.dart';
@@ -23,16 +24,11 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent
       ),
-      body: SafeArea(
-        child: Container(
-          width: double.infinity,
-          child: Column(
-            children: [
-            //SizedBox(height : HeightValue.h12),
-            //CustomHomePage(),
-            ],
-          ),
-        ),
+      body :Column(
+        children: [
+          Image (image: AssetImage(ImagesManager.khomeImage1),),
+           
+        ],
       ),
       backgroundColor: ColorManager.kprimaryColor,
     );
