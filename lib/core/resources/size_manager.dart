@@ -3,6 +3,7 @@ class HeightValue {
   static const double h27_5 =27.5;
   static const double h5 =5;
   static const double h190 =190;
+  static const double h12 =12;
   }
 class BlurValue {
   static const double b10 =10;

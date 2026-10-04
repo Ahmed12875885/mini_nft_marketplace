@@ -4,4 +4,6 @@ class StringManager {
   static const String kMessage2 =
       "You can buy and sell the NFTs of the\nbest artists in the world.";
   static const String kbutton2 = "Get Started now";
+  static const String khomeText1 = "NFT Marketplace";
+  
 }
