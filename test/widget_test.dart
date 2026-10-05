@@ -9,7 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:mini_nft_app/app/my_app.dart';
+import 'package:mini_nft_app/core/resources/constants.dart';
 import 'package:mini_nft_app/features/home/home.dart';
+import 'package:mini_nft_app/features/onboarding/widgets/custom_category_home_page.dart';
 
 void main() {
   testWidgets('opens onboarding and navigates to home', (
@@ -29,5 +31,39 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byType(HomePage), findsOneWidget);
+  });
+
+  testWidgets('displays each category with its own name and image', (
+    WidgetTester tester,
+  ) async {
+    tester.view.physicalSize = const Size(900, 844);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(const MaterialApp(home: HomePage()));
+
+    final categoryCards = tester.widgetList<CustomCategoryHomePage>(
+      find.byType(CustomCategoryHomePage),
+    );
+    expect(categoryCards.length, Constants.categoryList.length);
+
+    for (var index = 0; index < Constants.categoryList.length; index++) {
+      final category = Constants.categoryList[index];
+      final card = categoryCards.elementAt(index);
+
+      expect(card.category.title, category.title);
+      expect(card.category.image, category.image);
+      expect(find.text(category.title), findsOneWidget);
+      expect(
+        find.byWidgetPredicate(
+          (widget) =>
+              widget is Image &&
+              widget.image is AssetImage &&
+              (widget.image as AssetImage).assetName == category.image,
+        ),
+        findsOneWidget,
+      );
+    }
   });
 }

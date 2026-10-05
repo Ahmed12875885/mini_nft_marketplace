@@ -13,71 +13,79 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: BlurValue.b10, sigmaY: BlurValue.b10),
-              child: Container(
-                alignment: Alignment.center,
-                height: HeightValue.h190,
-                width: WidthValue.w300,
-                decoration: BoxDecoration(
-                  color: ColorManager.kcolor3.withValues(alpha: CustomeAlpha.b0_1),
-                  borderRadius: BorderRadius.circular(RadiusValue.r20),
-                  border: Border.all(
-                    color: ColorManager.kcolor3.withValues(alpha: CustomeAlpha.b0_1),
+    return Center(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(RadiusValue.r20),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: BlurValue.b10, sigmaY: BlurValue.b10),
+          child: Container(
+            width: WidthValue.w300,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
+            decoration: BoxDecoration(
+              color: ColorManager.kcolor3.withValues(alpha: CustomeAlpha.b0_1),
+              borderRadius: BorderRadius.circular(RadiusValue.r20),
+              border: Border.all(
+                color: ColorManager.kcolor3.withValues(alpha: CustomeAlpha.b0_1),
+              ),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  StringManager.kMessage,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: ColorManager.kcolor3,
+                    fontSize: FontSize.kFontSize20,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                child: Column(
-                  children: [
-                    SizedBox(height: HeightValue.h27_5),
-                    Text(
-                      StringManager.kMessage,
-                      style: TextStyle(
-                        color: ColorManager.kcolor3,
-                        fontSize: FontSize.kFontSize20,
-                        fontWeight: FontWeight.bold,
-                      ),
+                SizedBox(height: HeightValue.h5),
+                Text(
+                  textAlign: TextAlign.center,
+                  StringManager.kMessage2,
+                  style: TextStyle(
+                    color: ColorManager.kcolor4,
+                    fontSize: FontSize.kFontSize12,
+                  ),
+                ),
+                const SizedBox(height: 24),
+                Container(
+                  width: WidthValue.w198_2,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(RadiusValue.r40),
+                    border: Border.all(
+                      color: ColorManager.kcolor5.withValues(alpha: CustomeAlpha.b0_5),
                     ),
-                    SizedBox(height: HeightValue.h5),
-                    Text(
-                      textAlign: TextAlign.center,
-                      StringManager.kMessage2,
-                      style: TextStyle(
-                        color: ColorManager.kcolor4,
-                        fontSize: FontSize.kFontSize12,
-                      ),
-                    ),
-                    SizedBox(height: HeightValue.h27_5),
-                    Container(
-                      width: WidthValue.w198_2,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(RadiusValue.r40),
-                        border: Border.all(
-                          color: ColorManager.kcolor5.withValues(alpha: CustomeAlpha.b0_5),
-                        ),
-                        color: ColorManager.kcolor5.withValues(alpha: CustomeAlpha.b0_5),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(RadiusValue.r40),
-                        child: BackdropFilter(
-                          filter: ImageFilter.blur(sigmaX: BlurValue.b15, sigmaY: BlurValue.b15),
-                          child: MaterialButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, RoutName.kHome);
-                            },
-                            child: Text(StringManager.kbutton2,style: TextStyle(
-                              color: ColorManager.kcolor3,
-                              fontSize: FontSize.kFontSize16,
-                              fontWeight: FontWeight.bold,
-                            ),),
+                    color: ColorManager.kcolor5.withValues(alpha: CustomeAlpha.b0_5),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(RadiusValue.r40),
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: BlurValue.b15, sigmaY: BlurValue.b15),
+                      child: MaterialButton(
+                        minWidth: WidthValue.w198_2,
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        onPressed: () {
+                          Navigator.pushNamed(context, RoutName.kHome);
+                        },
+                        child: Text(
+                          StringManager.kbutton2,
+                          style: TextStyle(
+                            color: ColorManager.kcolor3,
+                            fontSize: FontSize.kFontSize16,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                     ),
-                  ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          );
+          ),
+        ),
+      ),
+    );
   }
 }
