@@ -7,6 +7,7 @@ class HeightValue {
   static const double h167 =167;
   static const double h60 =60;
   static const double h52 =52;
+  static const double h7 =7;
   }
 class BlurValue {
   static const double b10 =10;
@@ -22,6 +23,7 @@ class BlurValue {
   static const double w252 =252;
   static const double w260 =260;
   static const double w10 =10;
+  static const double w14 =14;
   }
   class RadiusValue {
   static const double r20 =20;

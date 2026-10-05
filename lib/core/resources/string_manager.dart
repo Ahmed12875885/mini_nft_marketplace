@@ -6,4 +6,8 @@ class StringManager {
   static const String kbutton2 = "Get Started now";
   static const String khomeText1 = "NFT Marketplace";
   static const String kimageText1 = "Art";
+  static const String kimageText2 = "Music";
+  static const String kimageText3 = "Virtual Worlds";
+  static const String khomeText12 = "Trending collections";
+  static const String khomeText13 = "Top seller";
 }

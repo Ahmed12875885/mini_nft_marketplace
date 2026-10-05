@@ -5,6 +5,7 @@ import 'package:mini_nft_app/core/resources/font_manager.dart';
 import 'package:mini_nft_app/core/resources/size_manager.dart';
 import 'package:mini_nft_app/core/resources/string_manager.dart';
 import 'package:mini_nft_app/features/onboarding/widgets/custom_category_home_page.dart';
+import 'package:mini_nft_app/features/onboarding/widgets/custom_sub_title.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -24,6 +25,7 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
       ),
+      
       body: Column(
         children: [
           SizedBox(
@@ -38,7 +40,26 @@ class HomePage extends StatelessWidget {
                   SizedBox(width: WidthValue.w10),
               itemCount: Constants.categoryList.length,
             ),
-          )
+          ),
+          SizedBox(height: HeightValue.h27_5),
+          CustomSubTitle(title: StringManager.khomeText12),
+          SizedBox(height: HeightValue.h7),
+          SizedBox(
+            height: HeightValue.h167,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                final category = Constants.categoryList[index];
+                return CustomCategoryHomePage(category: category);
+              },
+              separatorBuilder: (context, index) =>
+                  SizedBox(width: WidthValue.w10),
+              itemCount: Constants.categoryList.length,
+            ),
+          ),
+          SizedBox(height: HeightValue.h27_5),
+          CustomSubTitle(title: StringManager.khomeText13),
+          
         ],
       ),
       backgroundColor: ColorManager.kprimaryColor,
