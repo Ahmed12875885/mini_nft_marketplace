@@ -10,4 +10,7 @@ class StringManager {
   static const String kimageText3 = "Virtual Worlds";
   static const String khomeText12 = "Trending collections";
   static const String khomeText13 = "Top seller";
+  static const String khomeText200 = "200";
+    static const String khome3DArt = "3D Art";
+
 }

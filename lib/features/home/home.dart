@@ -6,9 +6,9 @@ import 'package:mini_nft_app/core/resources/constants.dart';
 import 'package:mini_nft_app/core/resources/font_manager.dart';
 import 'package:mini_nft_app/core/resources/size_manager.dart';
 import 'package:mini_nft_app/core/resources/string_manager.dart';
+import 'package:mini_nft_app/features/onboarding/widgets/custom_card_collection.dart';
 import 'package:mini_nft_app/features/onboarding/widgets/custom_category_home_page.dart';
 import 'package:mini_nft_app/features/onboarding/widgets/custom_sub_title.dart';
-import 'package:mini_nft_app/features/onboarding/widgets/custome_alpha.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
       ),
-      
+
       body: ListView(
         children: [
           SizedBox(
@@ -49,34 +49,7 @@ class HomePage extends StatelessWidget {
           CustomSubTitle(title: StringManager.khomeText12),
           //1
           SizedBox(height: HeightValue.h7),
-          UnconstrainedBox(
-            alignment: Alignment.centerLeft,
-            child: ClipRRect(
-                    borderRadius: BorderRadius.circular(RadiusValue.r20),
-                    child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: BlurValue.b10, sigmaY: BlurValue.b10),
-            child: Container(
-              height: HeightValue.h194,
-              width: WidthValue.w157,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
-              decoration: BoxDecoration(
-                color: ColorManager.kcolor3.withValues(alpha: CustomeAlpha.b0_1),
-                borderRadius: BorderRadius.circular(RadiusValue.r20),
-                border: Border.all(
-                  color: ColorManager.kcolor3.withValues(alpha: CustomeAlpha.b0_1),
-                ),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  
-                ],
-              ),
-            ),
-                    ),
-                  ),
-          ),
-        
+          CustomCardCollection()
         ],
       ),
       backgroundColor: ColorManager.kprimaryColor,

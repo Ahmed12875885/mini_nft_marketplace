@@ -8,5 +8,6 @@ class ColorManager {
   static const Color kcolor5 = Color(0xFF97A9F6);
   static const Color kprimaryColor = Color(0xFF211134);
   static const Color kimageColor = Color(0xFF000000);
-  
+  static const Color kredColor = Color(0xFFF00000);
+  static const Color kgrayColor = Color(0xFFF0F0F0);
 }
