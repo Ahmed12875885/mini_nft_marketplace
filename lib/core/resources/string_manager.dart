@@ -12,5 +12,15 @@ class StringManager {
   static const String khomeText13 = "Top seller";
   static const String khomeText200 = "200";
     static const String khome3DArt = "3D Art";
+    static const String khomeAbstract = "Abstract Art";
+  static const String khomePortrait = "Portrait Art";
+  static const String khomeTitel = "Tital";
+  static const String khomeWave = "Wave";
+  static const String khomeWave2 = "Wave";
+  static const String khomedescription = "description";
+    static const String khomewav2 = "wav2 #5672";
+  static const String khomewavepi = "wavepi #5267";
+  static const String khomeprice = "0.018";
+  
 
 }

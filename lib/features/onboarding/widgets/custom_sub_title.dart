@@ -14,7 +14,7 @@ final String title;
             
             child: Padding(
 
-              padding: const EdgeInsets.symmetric(horizontal: WidthValue.w14),
+              padding: const EdgeInsets.symmetric(horizontal: PadingValue.p14),
               child: Text(
                 title,
                 style: TextStyle(

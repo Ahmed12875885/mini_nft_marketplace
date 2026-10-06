@@ -20,7 +20,7 @@ class CustomCard extends StatelessWidget {
           filter: ImageFilter.blur(sigmaX: BlurValue.b10, sigmaY: BlurValue.b10),
           child: Container(
             width: WidthValue.w300,
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
+            padding: const EdgeInsets.symmetric(horizontal: PadingValue.p20, vertical:PadingValue.p22),
             decoration: BoxDecoration(
               color: ColorManager.kcolor3.withValues(alpha: CustomeAlpha.b0_1),
               borderRadius: BorderRadius.circular(RadiusValue.r20),
@@ -49,7 +49,7 @@ class CustomCard extends StatelessWidget {
                     fontSize: FontSize.kFontSize12,
                   ),
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: HeightValue.h24),
                 Container(
                   width: WidthValue.w198_2,
                   decoration: BoxDecoration(
@@ -65,7 +65,7 @@ class CustomCard extends StatelessWidget {
                       filter: ImageFilter.blur(sigmaX: BlurValue.b15, sigmaY: BlurValue.b15),
                       child: MaterialButton(
                         minWidth: WidthValue.w198_2,
-                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        padding: const EdgeInsets.symmetric(vertical: PadingValue.p12),
                         onPressed: () {
                           Navigator.pushNamed(context, RoutName.kHome);
                         },

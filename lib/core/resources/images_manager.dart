@@ -6,4 +6,7 @@ class ImagesManager {
   static const String ktrendImage1 = "assets/image/image4.png";
   static const String ktrendImage2 = "assets/image/image5.png";
   static const String ktrendImage3 = "assets/image/image6.png";
+  static const String ksellerImage1 = "assets/image/image7.png";
+  static const String ksellerImage2 = "assets/image/image8.png";
+  static const String ksellerImage3 = "assets/image/image9.png";
 }
