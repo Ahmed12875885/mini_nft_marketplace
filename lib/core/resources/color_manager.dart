@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 class ColorManager {
   static const Color kcolor1 = Color(0xFF5C609B);
@@ -9,5 +9,6 @@ class ColorManager {
   static const Color kprimaryColor = Color(0xFF211134);
   static const Color kimageColor = Color(0xFF000000);
   static const Color kredColor = Color(0xFFF00000);
-  static const Color kgrayColor = Color(0xFFF0F0F0);
+  static const Color kgrayColor = Color(0xFF8A8A8A);
+  static const Color kColor6 = Color(0xFF97A9F6);
 }

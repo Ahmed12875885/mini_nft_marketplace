@@ -10,7 +10,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:mini_nft_app/app/my_app.dart';
 import 'package:mini_nft_app/core/resources/constants.dart';
-import 'package:mini_nft_app/features/home/home.dart';
+import 'package:mini_nft_app/features/home/home_page.dart';
 import 'package:mini_nft_app/features/onboarding/widgets/custom_category_home_page.dart';
 
 void main() {

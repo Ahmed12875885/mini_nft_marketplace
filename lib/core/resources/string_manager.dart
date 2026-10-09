@@ -21,6 +21,6 @@ class StringManager {
     static const String khomewav2 = "wav2 #5672";
   static const String khomewavepi = "wavepi #5267";
   static const String khomeprice = "0.018";
-  
+  static const String kstatstext1 = "Stats";
 
 }

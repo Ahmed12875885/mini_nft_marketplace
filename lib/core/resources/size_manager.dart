@@ -14,6 +14,8 @@ class HeightValue {
    static const double h24 =24;
    static const double h236 =236;
    static const double h155 =155;
+   static const double h90 =90;
+  
   }
 class BlurValue {
   static const double b10 =10;
@@ -24,16 +26,21 @@ class BlurValue {
 
   }
   class WidthValue {
+    
+    static const double w70 =70;
   static const double w198_2 =198.2;
   static const double w157 =157;
   static const double w300 =300;
   static const double w252 =252;
   static const double w260 =260;
   static const double w10 =10;
+  static const double w16 =16;
   static const double w14 =14;
   static const double w139 =139;
   static const double w4 =4;
   static const double w155 =155;
+  static const double w39 =39;
+  static const double w50 =50;
   }
   class RadiusValue {
   static const double r20 =20;
@@ -46,16 +53,23 @@ class BlurValue {
     static const double o0_20 =0.20;
     static const double o0 =0.0;
     static const double o0_45 =0.45;
+    static const double o0_85 =0.85;
   }
   class PositionValue {
     static const double b0 =0;
   }
   class PadingValue{
     static const double p9 =9;
+    static const double p8 =8;
     static const double p16 =16;
     static const double p27 =27;
   static const double p12 =12;
   static const double p22 =22;
   static const double p20 =20;
   static const double p14 =14;
+  }
+
+  class SizeValue {
+     static const double s39 =39;
+     
   }
