@@ -1,82 +1,76 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:mini_nft_app/core/resources/color_manager.dart';
-import 'package:mini_nft_app/core/resources/font_manager.dart';
 import 'package:mini_nft_app/core/resources/size_manager.dart';
+import 'package:mini_nft_app/core/resources/string_manager.dart';
+import 'package:mini_nft_app/features/onboarding/widgets/custome_alpha.dart';
+import 'package:mini_nft_app/features/stats/screens/widget/custom_card_stat_page.dart';
+
+import 'package:mini_nft_app/features/stats/screens/widget/custom_category.dart';
+import 'package:mini_nft_app/features/stats/screens/widget/custom_sub_title_stat_page.dart';
+import 'package:mini_nft_app/models/table_row_modle.dart';
 
 class StatPage extends StatelessWidget {
   const StatPage({super.key});
+
   @override
   Widget build(BuildContext context) {
+    double listHeight = MediaQuery.of(context).size.height-200;
+    print(listHeight);
     return Column(
       children: [
+        SizedBox(height: HeightValue.h16),
+        CustomSubTitleStatPage(),
+        SizedBox(height: HeightValue.h27_5),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Container(
-              //padding: EdgeInsets.all(PadingValue.p16),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        Icons.stacked_bar_chart_sharp,
-                        color: ColorManager.kgrayColor,
-                      ),
-                      SizedBox(width: WidthValue.w4),
-                      Text(
-                        "Ranking",
-                        style: TextStyle(
-                          color: ColorManager.kcolor3,
-                          fontSize: FontSize.kFontSize16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 16),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: ColorManager.kcolor6,
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, -5),
-
-                          color: ColorManager.kcolor6,
-                          blurRadius: 16,
-                          spreadRadius: 1,
-                        ),
-                      ],
-                    ),
-                    width: 106,
-                    height: 3,
-                  ),
-                ],
-              ),
+            CustomCategory(
+              title: StringManager.kstatstext2,
+              icondata: Icons.border_all_rounded,
             ),
-
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.local_activity, color: ColorManager.kgrayColor),
-                SizedBox(width: WidthValue.w4),
-                Text(
-                  "Ranking",
-                  style: TextStyle(
-                    color: ColorManager.kgrayColor,
-                    fontSize: FontSize.kFontSize16,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ],
+            CustomCategory(
+              title: StringManager.kstatstext3,
+              icondata: Icons.link,
             ),
           ],
         ),
-
-        Container(
-          //padding: EdgeInsets.only(bottom: PadingValue.p16),
-          decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(color: ColorManager.kcolor7)),
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: PadingValue.p27,
+            horizontal: PadingValue.p14,
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(RadiusValue.r20),
+            child: BackdropFilter(
+              filter: ImageFilter.blur(
+                sigmaX: BlurValue.b10,
+                sigmaY: BlurValue.b10,
+              ),
+              child: Container(
+                height: 500,
+                alignment: Alignment.center,
+                
+                decoration: BoxDecoration(
+                  color: ColorManager.kcolor3.withValues(
+                    alpha: CustomeAlpha.b0_1,
+                  ),
+                  borderRadius: BorderRadius.circular(RadiusValue.r20),
+                  border: Border.all(
+                    color: ColorManager.kcolor3.withValues(
+                      alpha: CustomeAlpha.b0_1,
+                    ),
+                  ),
+                ),
+                child: ListView.separated(
+                  itemBuilder: (context, index) => CustomCardStatPage(tableRowModle: TableRowModle(number: index+1),),
+                  separatorBuilder: (context, index) =>
+                      SizedBox(height: HeightValue.h9),
+                  itemCount: 20,
+                ),
+              ),
+            ),
           ),
         ),
       ],

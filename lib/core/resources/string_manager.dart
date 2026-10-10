@@ -22,5 +22,11 @@ class StringManager {
   static const String khomewavepi = "wavepi #5267";
   static const String khomeprice = "0.018";
   static const String kstatstext1 = "Stats";
-
+  static const String kstatstext2 = "All categories";
+  static const String kstatstext3 = "All Chains";
+  static const String kstatstext4 = "3,99%";
+  static const String kstatstext5 = "200055.02";
+  static const String kAzumitext = "Azumi";
+  static const String kviewinfotext = "view info";
+  static const String k1text = "1";
 }

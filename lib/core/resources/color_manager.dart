@@ -12,4 +12,6 @@ class ColorManager {
   static const Color kgrayColor = Color(0xFF8A8A8A);
   static const Color kcolor6 = Color(0xFF8862FF);
   static const Color kcolor7 = Color(0xFF432360);
+  static const Color kcolor8 = Color(0xFF392060);
+  static const Color kgreencolor = Colors.green;
 }
